@@ -1,0 +1,66 @@
+/* 公共部分 */
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /*清除移动端默认的 点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的都是以边框开始计算宽度 百分比*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333;
+    cursor: pointer;
+}
+a{
+    text-decoration: none!important;
+    color: #333333;
+}
+a:hover{
+    text-decoration: none!important;
+}
+input{
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+ul,ol{
+    list-style: none;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/* 页面样式 */
+#wapMap{
+    width: 100%;
+    background: cornflowerblue ;
+}
+#container {
+    height: 15rem;
+    position:relative;
+    margin: 0rem;
+}
+.amap-info-content {
+    font-size: 12px
+}
+::-webkit-input-placeholder {padding-left:0.37333333rem; font-weight: 300; font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";font-size: 0.37333333rem;  color:#999999;  letter-spacing: 0;  }
+::-moz-placeholder {padding-left:0.37333333rem; font-weight: 300;font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";font-size: 0.37333333rem;  color: #999999;  letter-spacing: 0;   }
+:-ms-input-placeholder {padding-left:0.37333333rem; font-weight: 300; font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";font-size: 0.37333333rem;  color:#999999;  letter-spacing: 0;  }

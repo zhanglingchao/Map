@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppCooking ｜Mobile App Real-time Optimization Platform</title>
+    <meta name="apple-mobile-web-app-title" content="AppCooking"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="balck-translucent"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+    <meta name="description" content="AppCooking provides app optimization solutions. Our solutions are driven by big data and fine operations to help developers create superior business opportunities and help developers grow their apps at a high speed.">
+    <meta name="author" content="appcooking团队">
+    <meta name="keyword" content="Product optimization,App optimization,fine operation,app operation,AB testing / AB test,Realtime data,SDK,Visualization,Visualization events,App Config,tweaks,Config,user behavior,data operation,operation,App,AppCooking,growth,iterations,App iterations,App Update,Update App Faster,Real-time update,Release App">
+</head>
+<body>
+<script src="../commonfile/js/jquery.min.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script>
+  function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return "";
+ }
+  var acfromvValue = getQueryString("acfrom");
+  if($.cookie("CURRENT_USER_LANG_KEY") == undefined) {
+       if(acfromvValue){
+          window.location.href = "./en/index.html?acfrom="+acfromvValue
+       } else{
+          window.location.href = "./en/index.html"
+       }
+
+  }else{
+        var current_tag =  $.cookie('CURRENT_USER_LANG_KEY');
+        if(current_tag == "zh-CN"){
+          if(acfromvValue) {
+              window.location.href = "./cn/index.html?acfrom=" + acfromvValue
+          }else{
+               window.location.href = "./cn/index.html"
+          }
+        }else{
+          if(acfromvValue) {
+              window.location.href = "./en/index.html?acfrom=" + acfromvValue
+          }else{
+               window.location.href = "./en/index.html"
+          }
+        }
+  }
+</script>
+</body>
+</html>
